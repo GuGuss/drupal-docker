@@ -9,10 +9,9 @@ Typical workflow:
 ```
 $ mkdir new-project
 $ cd new-project/
-$ echo "FROM ralt/drupal" > Dockerfile
 $ cat > docker-compose.yml << EOF
 web:
-  build: .
+  image: "ralt/drupal"
   ports:
     - "8000:80"
   links:

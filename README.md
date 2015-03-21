@@ -1,14 +1,14 @@
 # ralt/drupal
 
-Creates a Drupal environment. DB not provided.
+Creates a Drupal environment. DB and Drupal not provided.
 
 See [here](example/) for a usage example.
 
-Typical workflow:
+Example workflow:
 
 ```
 $ mkdir new-project
-$ cd new-project/
+$ cd new-project/ # make sure there are drupal files here
 $ cat > docker-compose.yml << EOF
 web:
   image: "ralt/drupal"

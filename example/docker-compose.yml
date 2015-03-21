@@ -1,5 +1,5 @@
 web:
-  build: .
+  image: "ralt/drupal"
   ports:
     - "8000:80"
   links:

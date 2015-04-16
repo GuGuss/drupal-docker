@@ -1,0 +1,18 @@
+web:
+  image: "ralt/drupal"
+  ports:
+    - "8000:80"
+  links:
+    - db
+  volumes:
+    - .:/var/www/html
+
+db:
+  image: "mariadb"
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_USER: drupal
+    MYSQL_PASSWORD: password
+    MYSQL_DATABASE: drupal
+  volumes:
+    - /var/lib/mysql

@@ -1,11 +1,15 @@
 web:
-  image: "ralt/drupal"
+  image: "guguss/d8"
   ports:
     - "8000:80"
   links:
     - db
+  environment:
+    APACHE_LOG_DIR: /var/logs/
   volumes:
-    - .:/var/www/html
+    - /Users/augustin/projects/platform-projects/us/commerce-2x/www/:/var/www/html
+    - /var/logs
+    - /Users/augustin/projects/platform-projects/us/commerce-2x/shared/:/shared
 
 db:
   image: "mariadb"
